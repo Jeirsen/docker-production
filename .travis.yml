@@ -1,9 +1,9 @@
 sudo: required
 services:
- - docker
+  - docker
 
- before_install:
+before_install:
   - docker build -t Jeirsen/docker-production -f Dockerfile.dev .
 
-scripts: 
+scripts:
   - docker run Jeirsen/docker-production npm run test -- --coverage
