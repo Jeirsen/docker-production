@@ -4,6 +4,6 @@ services:
 
  before_install:
   - docker build -t jeirsen/docker-production -f Dockerfile.dev .
-  
+
 scripts: 
-  - coker run jeirsen/docker-production npm run test -- --coverage
+  - docker run jeirsen/docker-production npm run test -- --coverage
