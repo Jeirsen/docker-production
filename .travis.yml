@@ -1,4 +1,4 @@
-language: generic
+language: node_js
 sudo: required
 services:
   - docker
@@ -8,6 +8,10 @@ before_install:
 
 scripts:
   - docker run jeirsen/docker-production npm run test -- --coverage
+
+notifications:
+  email:
+    - jeirsen@gmail.com
 
 deploy:
   provider: elasticbeanstalk
